@@ -2,7 +2,7 @@
 
 /**
  * print_sign - print the sign of number with putchar
- * @n: is a number
+ * @n: is a number.
  *
  * Return: 1 if positif -1 if negatif 0 is 0
  */
