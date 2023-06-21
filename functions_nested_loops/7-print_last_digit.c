@@ -3,7 +3,6 @@
 /**
  * print_last_digit - prints the last digit of a number
  * @n: is a number
- * @Lastdigit: is n % 10
  *
  * Return: LastDigit
  */
