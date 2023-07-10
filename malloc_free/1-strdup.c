@@ -1,6 +1,44 @@
 #include "main.h"
 
 /**
+ * _strlen - returns thr length of a string
+ * @s: function parameter
+ *
+ * Return: count
+ */
+
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+
+	return (c);
+}
+
+/**
+ * *_strcpy - copies the string pointed to by src
+ * @dest: destination function
+ * @src: copied function
+ *
+ * Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
  * *_strdup - returns a pointer to a new allocated space in memory
  * @str: a string
  *
@@ -10,22 +48,16 @@
 char *_strdup(char *str)
 {
 	char *ar;
-	unsigned int i;
-	unsigned int j;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; str[i]; i++)
-		ar = malloc((i + 1) * sizeof(char));
+	ar = malloc(_strlen(str) + 1);
 
 	if (ar == NULL)
 		return (NULL);
 
-	for (j = 0; str[j]; j++)
-	{
-		ar[j] = str[j];
-	}
-	ar[j + 1] = 0;
+	_strcpy(ar, str);
+
 	return (ar);
 }
