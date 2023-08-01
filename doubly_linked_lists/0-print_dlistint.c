@@ -11,7 +11,7 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	size_t count;
 
-	for (count = 0; h != NULL; h = h->next)
+	for (count = 0; h != NULL; h = h->next, count++)
 	{
 		if (h == NULL)
 		{
@@ -19,9 +19,8 @@ size_t print_dlistint(const dlistint_t *h)
 		}
 		else
 		{
-			printf("%u\n", h->n);
+			printf("%d\n", h->n);
 		}
-		count++;
 	}
 	return (count);
 }
