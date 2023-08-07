@@ -5,7 +5,7 @@
  * @filename: a character
  * @letters: len
  *
- * Return:
+ * Return: writeFile
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
